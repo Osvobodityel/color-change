@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ball</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="ball"></div>
+	R: <input type="range" name="kolor" id="kolor1" oninput="zmianakoloru()" min="0" max="255"><p id="s1"></p>
+	G: <input type="range" name="kolor" id="kolor2" oninput="zmianakoloru()" min="0" max="255" ><p id="s2"></p>
+	B: <input type="range" name="kolor" id="kolor3" oninput="zmianakoloru()" min="0" max="255"><p id="s3"></p>
+	<script type="text/javascript">
+		function zmianakoloru() {
+			var w1 = document.getElementById("kolor1").value;
+			document.getElementById("s1").innerHTML=w1;
+			var w2 = document.getElementById("kolor2").value;
+			document.getElementById("s2").innerHTML=w2;
+			var w3 = document.getElementById("kolor3").value;
+			document.getElementById("s3").innerHTML=w3;
+			document.getElementById("ball").style.backgroundColor="rgb("+w1+","+w2+","+w3+")";
+		}
+	</script>
+</body>
+</html>
